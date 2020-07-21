@@ -30,7 +30,17 @@ public class Logic {
         figures[index] = figures[index].copy(dest);
     }
 
-    private boolean isFree(Cell[] steps) {
+    private boolean isFree(Cell[] steps) throws ImpossibleMoveException {
+        for (int i = 0; i < steps.length; i++) {
+            try {
+                if(findBy(steps[i]) != 1) {
+                    throw new ImpossibleMoveException();
+//                    return false;
+                }
+            } catch (FigureNotFoundException e) {
+                // do nothing
+            }
+        }
         return true;
     }
 
