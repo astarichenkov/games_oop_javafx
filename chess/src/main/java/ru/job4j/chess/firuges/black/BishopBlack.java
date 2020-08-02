@@ -17,12 +17,7 @@ public class BishopBlack implements Figure {
         return position;
     }
 
-    //    @Override
-//    public Cell[] way(Cell source, Cell dest) {
-//        throw new IllegalStateException(
-//                String.format("Could not way by diagonal from %s to %s", source, dest)
-//        );
-//    }
+
     @Override
     public Cell[] way(Cell source, Cell dest) {
         if (!isDiagonal(source, dest)) {

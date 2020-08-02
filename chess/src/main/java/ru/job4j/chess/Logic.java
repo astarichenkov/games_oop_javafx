@@ -34,8 +34,7 @@ public class Logic {
         for (int i = 0; i < steps.length; i++) {
             try {
                 if(findBy(steps[i]) != 1) {
-                    throw new ImpossibleMoveException();
-//                    return false;
+                    return false;
                 }
             } catch (FigureNotFoundException e) {
                 // do nothing
